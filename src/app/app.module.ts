@@ -15,6 +15,7 @@ import { ClienteDeleteComponent } from './cliente-delete/cliente-delete.componen
 import { Interceptor } from 'src/services/interceptors/interceptor.module';
 import { LoginComponent } from './login/login.component';
 import {AuthService} from 'src/services/auth.service';
+import {AuthGuardService} from 'src/services/auth-guard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,18 +34,15 @@ import {AuthService} from 'src/services/auth.service';
     FormsModule,
     Interceptor,
     RouterModule.forRoot([
-      { path: '', component: LoginComponent },
-      { path: 'clientes', component: ClientesComponent },
-      { path: 'clientes/:id', component: ClienteDetalhesComponent },
-      { path: 'clientes-update/:id', component: ClienteUpdateComponent },
-      { path: 'clientes-new', component: ClienteNewComponent },
-      { path: 'clientes-delete/:id', component: ClienteDeleteComponent },
+      
+     
       
     ])
   ],
   providers: [
     ClienteService,
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })

@@ -11,7 +11,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 @Injectable()
 
 export class HttpsRequestInterceptor implements HttpInterceptor {
-    private token = '123456';
+    private token = localStorage.getItem('token');
     intercept(
         req: HttpRequest<any>,
         next: HttpHandler,

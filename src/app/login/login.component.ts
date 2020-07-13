@@ -4,6 +4,9 @@ import { Login } from 'src/model/login';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/services/auth.service';
 import { Message } from 'src/model/message';
+
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,6 +14,7 @@ import { Message } from 'src/model/message';
 })
 export class LoginComponent implements OnInit {
 
+  
   login : Login;
   formGroup : FormGroup;
   message : Message;
@@ -32,11 +36,15 @@ export class LoginComponent implements OnInit {
   }
 
   tryRegister(){
+
     let d = this.auth.login(this.formGroup.value).subscribe(data=>{
       //console.log(data.body.message.code);
       this.message = data.body.message;
+      console.log(this.message);
       if(this.message.code == 200){
-        console.log("login válido");
+        
+       this.auth.setToken(this.message.text);
+          console.log('login válido ' + this.message.text)
       }else{
         console.log("login invalido");
       }

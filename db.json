@@ -1,0 +1,40 @@
+{
+  "clientes": [
+    {
+      "id": "101",
+      "nome": "Roberto Barbosa",
+      "telefone": "(21) 99999-9999",
+      "email": "roberto@email.com"
+    },
+    {
+      "id": "102",
+      "nome": "Aline Mendonça",
+      "telefone": "(21) 99999-9999",
+      "email": "aline@email.com"
+    },
+    {
+      "id": "107",
+      "nome": "Carolina Silva",
+      "telefone": "(21) 99999-9999",
+      "email": "carolina@email.com"
+    },
+    {
+      "id": "108",
+      "nome": "Bruno de Souza",
+      "telefone": "(21) 99999-9999",
+      "email": "bruno@email.com"
+    },
+    {
+      "nome": "",
+      "telefone": "",
+      "email": "",
+      "id": "BRfkx6M"
+    },
+    {
+      "nome": "dasdasd",
+      "telefone": "23131231233212",
+      "email": "dasd@email.com",
+      "id": "BEoL0Sx"
+    }
+  ]
+}

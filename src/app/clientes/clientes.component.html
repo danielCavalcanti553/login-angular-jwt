@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Lista de Clientes</h1>
+
+    <table class="table">
+
+        <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th></th>
+        </tr>
+
+        <tr *ngFor="let cliente of lista">
+            <td>{{cliente.id}}</td>
+            <td>{{cliente.nome}}</td>
+            <td><a [routerLink]="['/clientes/',cliente.id]" class="btn btn-primary">Visualizar</a></td>
+        </tr>
+    </table>
+
+    <a [routerLink]="['/clientes-new']" class="btn btn-primary">Novo</a>
+
+</div>
